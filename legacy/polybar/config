@@ -1,0 +1,47 @@
+[bar/default]
+monitor = LVDS-1
+width = 100%
+height = 15
+
+background = #232323
+foreground = #FFFFFF
+font-0 = Misc Tamsyn:size=16
+
+modules-left = i3
+modules-right = date
+
+module-margin-left = 0
+module-margin-right = 0
+
+padding-left = 0
+padding-right = 1
+
+border-top-size = 3
+border-top-color = #232323
+
+[module/i3]
+type = internal/i3
+interval = 1.0
+index-sort = true
+wrapping-scroll = false
+
+format-background = #232323
+format-foreground = #FFFFFF
+format = <label-state> <label-mode>
+
+label-focused = %index%
+label-focused-padding = 1
+label-unfocused = %index%
+label-unfocused-padding = 1
+label-urgent = %index%
+label-urgent-padding = 1
+
+[module/date]
+type = internal/date
+interval = 1.0
+time = %H:%M
+
+format-background = #232323
+format-foreground = #FFFFFF
+
+label = %time%

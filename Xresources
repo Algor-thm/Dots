@@ -1,0 +1,77 @@
+! urxvt
+
+URxvt*scrollBar:		false
+URxvt*geometry:			80x21
+URxvt.internalBorder:		15
+
+! Perl extensions
+
+URxvt.perl-ext-common:		default,url-select,clipboard
+
+! URL-select
+
+URxvt.keysym.M-u:		perl:url-select:select_next
+URxvt.url-select.autocopy:	true
+URxvt.url-select.button:	1
+URxvt.url-select.launcher:	qutebrowser
+URxvt.url-select.underline:	true
+
+! Clipboard
+
+URxvt.keysym.Shift-Control-V:	perl:clipboard:paste
+URxvt.keysym.Shift-Control-C:	perl:clipboard:copy
+
+! Ctrl-shift disable popup
+
+URxvt.iso14755:		false
+URxvt.iso14755_52:	false
+
+! Colors and shit
+
+URxvt.font:		xft:Misc Tamsyn:size=10
+URxvt.letterSpace:	0
+URxvt*foreground:	#FFFFFF
+URxvt*background:	#232323
+
+! color0	black
+! color1	red
+! color2	green
+! color3	yellow
+! color4	blue
+! color5	purple
+! color6	cyan
+! color7	white
+
+URxvt*color0:	#073642
+URxvt*color1:	#DC322F
+URxvt*color2:	#859900
+URxvt*color3:	#B58900
+URxvt*color4:	#268BD2
+URxvt*color5:	#6C71C4
+URxvt*color6:	#2AA198
+URxvt*color7:	#FFFFFF
+
+! color8	black
+! color9	red
+! color10	green
+! color11	yellow
+! color12	blue
+! color13	purple
+! color14	cyan
+! color15	white
+
+URxvt*color8:	#FFFFFF
+URxvt*color9:	#DC322F
+URxvt*color10:	#859900
+URxvt*color11:	#B58900
+URxvt*color12:	#268BD2
+URxvt*color13:	#6C71C4
+URxvt*color14:	#2AA198
+URxvt*color15:	#FFFFFF
+
+! Rofi
+
+rofi.font:		Misc Tamsyn 10
+rofi.color-enabled: 	true
+rofi.color-window: 	#232323, #232323, #232323
+rofi.color-normal:	#232323, #FFFFFF, #232323, #FFFFFF, #232323

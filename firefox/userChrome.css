@@ -1,0 +1,119 @@
+@namespace xul url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+
+/*
+
+    Author: Bear
+    Compatibility: Firefox 64 (might work elsewhere, was just made specifically using Firefox 64)
+    Website: http://www.dankpad.xyz/
+
+    Inspiration from Twily (http://twily.info/).
+
+*/
+
+
+:root {
+
+    /* Tab Variables */
+    --bg-light: #FFFFFF; --bg-dark: #232323;
+    --fg-light: #232323; --fg-dark: #FFFFFF;
+    --tab-height: 24px; --tab-icon-size: 16px;
+    --tab-fonts: "Misc Tamsyn"; --tab-font-size: 14px; --tab-text-align: left;
+
+    /* URL Variables */
+    --url-background: var(--bg-dark); --url-color: var(--fg-dark);
+    --url-height: 24px;
+    --url-fonts: "Misc Tamsyn"; --url-font-size: 14px; --url-text-align: center;
+
+}
+
+
+/* Hidden Items */
+#library-button, #sidebar-button, #titlebar-buttonbox-container, #reload-button, #home-button, #back-button, #forward-button, 
+#close-icon, .tab-close-button, .tabs-newtab-button, #star-button, .urlbar-icon, .urlbar-history-dropmarker, #identity-box, 
+#PanelUI-menu-button, #new-tab-button, #alltabs-button, #PanelUI-button { display: none !important; }
+
+
+/* Hide Scrollbar */
+:-moz-any(#content,#appcontent) browser {
+ 
+    margin-right: -14px !important;
+    overflow-y: scroll;
+    margin-bottom: -14px !important;
+    overflow-x: scroll;
+
+}
+
+
+/* URL Bar Tweaks */
+/* START */
+
+
+    /* Merges Entire URL Bar */
+    #urlbar {
+
+        border: none !important; padding: 0 2px 0 8px !important;
+        background: var(--url-background) !important; color: var(--url-color) !important;
+        font-family: var(--url-fonts) !important; font-size: var(--url-font-size) !important;
+        text-align: var(--url-text-align) !important;
+        height: 100% !important;
+
+    }
+
+    /* Helps Merge URL Bar */
+    #nav-bar {
+
+        background-color: var(--bg-dark) !important;
+        background-image: none !important;
+
+    }
+
+    /* Sets URL Bar Height */
+    .urlbar-textbox-container .urlbar-input-box .textbox-input {
+
+        height: var(--url-height) !important;
+
+    }
+
+
+/* END */
+/* URL Bar Tweaks */
+
+
+/* Tab Tweaks */
+/* START */
+
+    /* Overall Tab Tweaks */
+    #tabbrowser-tabs {
+
+        background-color: var(--bg-dark) !important;
+        font-family: var(--tab-fonts); font-size: var(--tab-font-size);
+    
+    }
+    
+    /* Removes Selected Tab Overlay */
+    .tab-background[selected="true"] {
+
+        background-color: var(--bg-dark) !important;
+        background-image: none !important;
+    }
+
+    /* Active Tab Border Hide */
+    #navigator-toolbox {
+
+        --tabs-border-color: var(--bg-dark) !important;
+
+    }
+
+    /* Removes Tab Line Color and Sets Font */
+    .tabbrowser-tab:not([visuallyselected="false"]) {
+
+        background-color: var(--bg-dark) !important;
+        background-image: none !important;
+        --tab-line-color: none !important;
+        color: var(--bg-light) !important;
+
+    }
+
+/* END */
+/* Tab Tweaks */
