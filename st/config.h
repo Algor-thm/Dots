@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "Misc Tamsyn: size=14";
+static char *font = "Misc Tamsyn:pixelsize=14";
 static int borderpx = 15;
 
 /*
@@ -30,9 +30,9 @@ static float chscale = 1.0;
 /*
  * word delimiter string
  *
- * More advanced example: " `'\"()[]{}"
+ * More advanced example: L" `'\"()[]{}"
  */
-char *worddelimiters = " ";
+wchar_t *worddelimiters = L" ";
 
 /* selection timeouts (in milliseconds) */
 static unsigned int doubleclicktimeout = 300;
@@ -80,13 +80,12 @@ char *termname = "st-256color";
  *
  *	stty tabs
  */
-unsigned int tabspaces = 8;
+unsigned int tabspaces = 4;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
-	
-    /* My colors */
-    "#000000",	/* 0: Black */                                                                                        
+
+    "#000000", 	/* 0: Black */
     "#DC322F",	/* 1: Red */
     "#859900",	/* 2: Green */
     "#B58900",	/* 3: Yellow */
@@ -101,7 +100,7 @@ static const char *colorname[] = {
     "#268BD2",	/* 12: Blue */
     "#D33682",	/* 13: Magenta */
     "#2AA198",	/* 14: Cyan */
-    "#FFFFFF",	/* 15: White */
+    "#FFFFFF"	/* 15: White */
 
 };
 
@@ -170,10 +169,8 @@ static Shortcut shortcuts[] = {
 	{ TERMMOD,              XK_C,           clipcopy,       {.i =  0} },
 	{ TERMMOD,              XK_V,           clippaste,      {.i =  0} },
 	{ TERMMOD,              XK_Y,           selpaste,       {.i =  0} },
+	{ ShiftMask,            XK_Insert,      selpaste,       {.i =  0} },
 	{ TERMMOD,              XK_Num_Lock,    numlock,        {.i =  0} },
-	{ TERMMOD,              XK_I,           iso14755,       {.i =  0} },
-	{ ShiftMask,            XK_Page_Up,     kscrollup,      {.i = -1} },
-	{ ShiftMask,            XK_Page_Down,   kscrolldown,    {.i = -1} },
 };
 
 /*
