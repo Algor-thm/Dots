@@ -7,4 +7,4 @@
 
 #### Screenshots
 
-![Firefox](https://git.dankpad.xyz/Bear/Dot-Files/raw/branch/master/firefox/firefox.png)
+![Firefox](firefox.png)

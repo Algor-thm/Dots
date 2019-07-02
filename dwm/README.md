@@ -7,4 +7,4 @@
 
 #### Screenshots
 
-![dwm](https://git.dankpad.xyz/Bear/Dot-Files/raw/branch/master/dwm/dwm.png)
+![dwm](dwm.png)

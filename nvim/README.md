@@ -13,4 +13,4 @@
 
 #### Screenshots
 
-![nvim](https://git.dankpad.xyz/Bear/Dot-Files/raw/branch/master/nvim/nvim.png)
+![nvim](nvim.png)
